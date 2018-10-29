@@ -33,11 +33,14 @@ public class PlayerController : MonoBehaviour {
 			rolling = true;
 			Debug.Log("Down pressed! Dude Rollin!");
 		}
-		else
+		else if(rolling)
 		{
-			GetComponent<Rigidbody2D>().fixedAngle = true;
+			//GetComponent<Rigidbody2D>().fixedAngle = true;
 			rolling = false;
+            Debug.Log("Down let go! Stopped Rollin");
 			
 		}
+
+        
 	}
 }
